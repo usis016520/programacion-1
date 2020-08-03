@@ -168,7 +168,7 @@ Partial Class Form1
         Me.cboOperaciones.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboOperaciones.FormattingEnabled = True
         Me.cboOperaciones.Items.AddRange(New Object() {"Seleccione una opcion", "Suma", "Resta", "Multiplicacion", "Division"})
-        Me.cboOperaciones.Location = New System.Drawing.Point(230, 86)
+        Me.cboOperaciones.Location = New System.Drawing.Point(203, 83)
         Me.cboOperaciones.Name = "cboOperaciones"
         Me.cboOperaciones.Size = New System.Drawing.Size(121, 21)
         Me.cboOperaciones.TabIndex = 13
