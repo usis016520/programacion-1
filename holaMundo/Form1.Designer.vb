@@ -22,239 +22,114 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.lbltotalx21xf1 = New System.Windows.Forms.Label()
-        Me.lbltotalx1xf1 = New System.Windows.Forms.Label()
-        Me.lbltotalf1 = New System.Windows.Forms.Label()
-        Me.grdEstadistica = New System.Windows.Forms.DataGridView()
-        Me.x1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.f1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.n1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.x1xf1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.x21xf1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.lblRespuestaDesvTipica = New System.Windows.Forms.Label()
-        Me.lbldesvtipica = New System.Windows.Forms.Label()
-        Me.lblVarianza = New System.Windows.Forms.Label()
-        Me.lblMedia = New System.Windows.Forms.Label()
-        Me.lblRespuestaVarianza = New System.Windows.Forms.Label()
-        Me.lblRespuestaMedia = New System.Windows.Forms.Label()
-        Me.lblserie = New System.Windows.Forms.Label()
-        Me.txtserie = New System.Windows.Forms.TextBox()
-        Me.btnMediaAritmetica = New System.Windows.Forms.Button()
-        CType(Me.grdEstadistica, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.btnCajero = New System.Windows.Forms.Button()
+        Me.btnPrimo = New System.Windows.Forms.Button()
+        Me.lblnum = New System.Windows.Forms.Label()
+        Me.txtnum = New System.Windows.Forms.TextBox()
+        Me.btnParImpar = New System.Windows.Forms.Button()
+        Me.lstEjercicios = New System.Windows.Forms.ListBox()
+        Me.btnProcesar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'lbltotalx21xf1
+        'btnCajero
         '
-        Me.lbltotalx21xf1.AutoSize = True
-        Me.lbltotalx21xf1.Location = New System.Drawing.Point(1011, 537)
-        Me.lbltotalx21xf1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbltotalx21xf1.Name = "lbltotalx21xf1"
-        Me.lbltotalx21xf1.Size = New System.Drawing.Size(28, 17)
-        Me.lbltotalx21xf1.TabIndex = 25
-        Me.lbltotalx21xf1.Text = "0.0"
+        Me.btnCajero.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCajero.Location = New System.Drawing.Point(386, 219)
+        Me.btnCajero.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCajero.Name = "btnCajero"
+        Me.btnCajero.Size = New System.Drawing.Size(113, 62)
+        Me.btnCajero.TabIndex = 13
+        Me.btnCajero.Text = "Cajero"
+        Me.btnCajero.UseVisualStyleBackColor = True
         '
-        'lbltotalx1xf1
+        'btnPrimo
         '
-        Me.lbltotalx1xf1.AutoSize = True
-        Me.lbltotalx1xf1.Location = New System.Drawing.Point(878, 537)
-        Me.lbltotalx1xf1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbltotalx1xf1.Name = "lbltotalx1xf1"
-        Me.lbltotalx1xf1.Size = New System.Drawing.Size(28, 17)
-        Me.lbltotalx1xf1.TabIndex = 24
-        Me.lbltotalx1xf1.Text = "0.0"
+        Me.btnPrimo.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnPrimo.Location = New System.Drawing.Point(264, 219)
+        Me.btnPrimo.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnPrimo.Name = "btnPrimo"
+        Me.btnPrimo.Size = New System.Drawing.Size(113, 62)
+        Me.btnPrimo.TabIndex = 12
+        Me.btnPrimo.Text = "Primo?"
+        Me.btnPrimo.UseVisualStyleBackColor = True
         '
-        'lbltotalf1
+        'lblnum
         '
-        Me.lbltotalf1.AutoSize = True
-        Me.lbltotalf1.Location = New System.Drawing.Point(603, 537)
-        Me.lbltotalf1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbltotalf1.Name = "lbltotalf1"
-        Me.lbltotalf1.Size = New System.Drawing.Size(28, 17)
-        Me.lbltotalf1.TabIndex = 23
-        Me.lbltotalf1.Text = "0.0"
+        Me.lblnum.AutoSize = True
+        Me.lblnum.Location = New System.Drawing.Point(202, 111)
+        Me.lblnum.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblnum.Name = "lblnum"
+        Me.lblnum.Size = New System.Drawing.Size(62, 17)
+        Me.lblnum.TabIndex = 11
+        Me.lblnum.Text = "Numero:"
         '
-        'grdEstadistica
+        'txtnum
         '
-        Me.grdEstadistica.AllowUserToDeleteRows = False
-        Me.grdEstadistica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.grdEstadistica.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.x1, Me.f1, Me.n1, Me.x1xf1, Me.x21xf1})
-        Me.grdEstadistica.Location = New System.Drawing.Point(330, 40)
-        Me.grdEstadistica.Margin = New System.Windows.Forms.Padding(4)
-        Me.grdEstadistica.Name = "grdEstadistica"
-        Me.grdEstadistica.RowHeadersWidth = 51
-        Me.grdEstadistica.Size = New System.Drawing.Size(724, 484)
-        Me.grdEstadistica.TabIndex = 22
+        Me.txtnum.Location = New System.Drawing.Point(272, 107)
+        Me.txtnum.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtnum.Name = "txtnum"
+        Me.txtnum.Size = New System.Drawing.Size(104, 22)
+        Me.txtnum.TabIndex = 10
         '
-        'x1
+        'btnParImpar
         '
-        Me.x1.HeaderText = "X1"
-        Me.x1.MinimumWidth = 6
-        Me.x1.Name = "x1"
-        Me.x1.Width = 125
+        Me.btnParImpar.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnParImpar.Location = New System.Drawing.Point(164, 219)
+        Me.btnParImpar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnParImpar.Name = "btnParImpar"
+        Me.btnParImpar.Size = New System.Drawing.Size(100, 62)
+        Me.btnParImpar.TabIndex = 9
+        Me.btnParImpar.Text = "Par o Impar?"
+        Me.btnParImpar.UseVisualStyleBackColor = True
         '
-        'f1
+        'lstEjercicios
         '
-        Me.f1.HeaderText = "F1"
-        Me.f1.MinimumWidth = 6
-        Me.f1.Name = "f1"
-        Me.f1.Width = 125
+        Me.lstEjercicios.FormattingEnabled = True
+        Me.lstEjercicios.ItemHeight = 16
+        Me.lstEjercicios.Location = New System.Drawing.Point(507, 36)
+        Me.lstEjercicios.Margin = New System.Windows.Forms.Padding(4)
+        Me.lstEjercicios.Name = "lstEjercicios"
+        Me.lstEjercicios.Size = New System.Drawing.Size(223, 244)
+        Me.lstEjercicios.TabIndex = 8
         '
-        'n1
+        'btnProcesar
         '
-        Me.n1.HeaderText = "N1"
-        Me.n1.MinimumWidth = 6
-        Me.n1.Name = "n1"
-        Me.n1.Width = 125
-        '
-        'x1xf1
-        '
-        Me.x1xf1.HeaderText = "X1 x F1"
-        Me.x1xf1.MinimumWidth = 6
-        Me.x1xf1.Name = "x1xf1"
-        Me.x1xf1.Width = 125
-        '
-        'x21xf1
-        '
-        Me.x21xf1.HeaderText = "X21 x F1"
-        Me.x21xf1.MinimumWidth = 6
-        Me.x21xf1.Name = "x21xf1"
-        Me.x21xf1.Width = 125
-        '
-        'lblRespuestaDesvTipica
-        '
-        Me.lblRespuestaDesvTipica.AutoSize = True
-        Me.lblRespuestaDesvTipica.Location = New System.Drawing.Point(114, 160)
-        Me.lblRespuestaDesvTipica.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRespuestaDesvTipica.Name = "lblRespuestaDesvTipica"
-        Me.lblRespuestaDesvTipica.Size = New System.Drawing.Size(16, 17)
-        Me.lblRespuestaDesvTipica.TabIndex = 21
-        Me.lblRespuestaDesvTipica.Text = "?"
-        '
-        'lbldesvtipica
-        '
-        Me.lbldesvtipica.AutoSize = True
-        Me.lbldesvtipica.Location = New System.Drawing.Point(13, 160)
-        Me.lbldesvtipica.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lbldesvtipica.Name = "lbldesvtipica"
-        Me.lbldesvtipica.Size = New System.Drawing.Size(90, 17)
-        Me.lbldesvtipica.TabIndex = 20
-        Me.lbldesvtipica.Text = "Desv. Tipica:"
-        '
-        'lblVarianza
-        '
-        Me.lblVarianza.AutoSize = True
-        Me.lblVarianza.Location = New System.Drawing.Point(13, 124)
-        Me.lblVarianza.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblVarianza.Name = "lblVarianza"
-        Me.lblVarianza.Size = New System.Drawing.Size(68, 17)
-        Me.lblVarianza.TabIndex = 19
-        Me.lblVarianza.Text = "Varianza:"
-        '
-        'lblMedia
-        '
-        Me.lblMedia.AutoSize = True
-        Me.lblMedia.Location = New System.Drawing.Point(13, 93)
-        Me.lblMedia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblMedia.Name = "lblMedia"
-        Me.lblMedia.Size = New System.Drawing.Size(50, 17)
-        Me.lblMedia.TabIndex = 18
-        Me.lblMedia.Text = "Media:"
-        '
-        'lblRespuestaVarianza
-        '
-        Me.lblRespuestaVarianza.AutoSize = True
-        Me.lblRespuestaVarianza.Location = New System.Drawing.Point(114, 124)
-        Me.lblRespuestaVarianza.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRespuestaVarianza.Name = "lblRespuestaVarianza"
-        Me.lblRespuestaVarianza.Size = New System.Drawing.Size(16, 17)
-        Me.lblRespuestaVarianza.TabIndex = 17
-        Me.lblRespuestaVarianza.Text = "?"
-        '
-        'lblRespuestaMedia
-        '
-        Me.lblRespuestaMedia.AutoSize = True
-        Me.lblRespuestaMedia.Location = New System.Drawing.Point(114, 93)
-        Me.lblRespuestaMedia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblRespuestaMedia.Name = "lblRespuestaMedia"
-        Me.lblRespuestaMedia.Size = New System.Drawing.Size(16, 17)
-        Me.lblRespuestaMedia.TabIndex = 16
-        Me.lblRespuestaMedia.Text = "?"
-        '
-        'lblserie
-        '
-        Me.lblserie.AutoSize = True
-        Me.lblserie.Location = New System.Drawing.Point(13, 44)
-        Me.lblserie.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblserie.Name = "lblserie"
-        Me.lblserie.Size = New System.Drawing.Size(45, 17)
-        Me.lblserie.TabIndex = 15
-        Me.lblserie.Text = "Serie:"
-        '
-        'txtserie
-        '
-        Me.txtserie.Location = New System.Drawing.Point(66, 40)
-        Me.txtserie.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtserie.Name = "txtserie"
-        Me.txtserie.Size = New System.Drawing.Size(232, 22)
-        Me.txtserie.TabIndex = 14
-        Me.txtserie.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
-        '
-        'btnMediaAritmetica
-        '
-        Me.btnMediaAritmetica.Location = New System.Drawing.Point(17, 519)
-        Me.btnMediaAritmetica.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnMediaAritmetica.Name = "btnMediaAritmetica"
-        Me.btnMediaAritmetica.Size = New System.Drawing.Size(283, 52)
-        Me.btnMediaAritmetica.TabIndex = 13
-        Me.btnMediaAritmetica.Text = "Calculos estadisticos"
-        Me.btnMediaAritmetica.UseVisualStyleBackColor = True
+        Me.btnProcesar.Location = New System.Drawing.Point(507, 288)
+        Me.btnProcesar.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnProcesar.Name = "btnProcesar"
+        Me.btnProcesar.Size = New System.Drawing.Size(224, 54)
+        Me.btnProcesar.TabIndex = 7
+        Me.btnProcesar.Text = "Mostrar Pares e impares"
+        Me.btnProcesar.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1067, 611)
-        Me.Controls.Add(Me.lbltotalx21xf1)
-        Me.Controls.Add(Me.lbltotalx1xf1)
-        Me.Controls.Add(Me.lbltotalf1)
-        Me.Controls.Add(Me.grdEstadistica)
-        Me.Controls.Add(Me.lblRespuestaDesvTipica)
-        Me.Controls.Add(Me.lbldesvtipica)
-        Me.Controls.Add(Me.lblVarianza)
-        Me.Controls.Add(Me.lblMedia)
-        Me.Controls.Add(Me.lblRespuestaVarianza)
-        Me.Controls.Add(Me.lblRespuestaMedia)
-        Me.Controls.Add(Me.lblserie)
-        Me.Controls.Add(Me.txtserie)
-        Me.Controls.Add(Me.btnMediaAritmetica)
+        Me.ClientSize = New System.Drawing.Size(894, 379)
+        Me.Controls.Add(Me.btnCajero)
+        Me.Controls.Add(Me.btnPrimo)
+        Me.Controls.Add(Me.lblnum)
+        Me.Controls.Add(Me.txtnum)
+        Me.Controls.Add(Me.btnParImpar)
+        Me.Controls.Add(Me.lstEjercicios)
+        Me.Controls.Add(Me.btnProcesar)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.Text = "Calculadora Basica"
-        CType(Me.grdEstadistica, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents lbltotalx21xf1 As Label
-    Friend WithEvents lbltotalx1xf1 As Label
-    Friend WithEvents lbltotalf1 As Label
-    Friend WithEvents grdEstadistica As DataGridView
-    Friend WithEvents x1 As DataGridViewTextBoxColumn
-    Friend WithEvents f1 As DataGridViewTextBoxColumn
-    Friend WithEvents n1 As DataGridViewTextBoxColumn
-    Friend WithEvents x1xf1 As DataGridViewTextBoxColumn
-    Friend WithEvents x21xf1 As DataGridViewTextBoxColumn
-    Friend WithEvents lblRespuestaDesvTipica As Label
-    Friend WithEvents lbldesvtipica As Label
-    Friend WithEvents lblVarianza As Label
-    Friend WithEvents lblMedia As Label
-    Friend WithEvents lblRespuestaVarianza As Label
-    Friend WithEvents lblRespuestaMedia As Label
-    Friend WithEvents lblserie As Label
-    Friend WithEvents txtserie As TextBox
-    Friend WithEvents btnMediaAritmetica As Button
+    Friend WithEvents btnCajero As Button
+    Friend WithEvents btnPrimo As Button
+    Friend WithEvents lblnum As Label
+    Friend WithEvents txtnum As TextBox
+    Friend WithEvents btnParImpar As Button
+    Friend WithEvents lstEjercicios As ListBox
+    Friend WithEvents btnProcesar As Button
 End Class

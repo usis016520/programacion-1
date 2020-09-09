@@ -1,44 +1,63 @@
 ﻿Public Class Form1
-    Dim objEstadistica As New estadistica
-    Private Sub btnMediaAritmetica_Click(sender As Object, e As EventArgs) Handles btnMediaAritmetica.Click
-        lblRespuestaMedia.Text = objEstadistica.calcularMedia(txtserie.Text.Split(","))
-        lblRespuestaVarianza.Text = objEstadistica.calcularVarianza(txtserie.Text.Split(","))
-        lblRespuestaDesvTipica.Text = objEstadistica.calcularDesvTipica(txtserie.Text.Split(","))
+    Private Sub btnProcesar_Click(sender As Object, e As EventArgs) Handles btnProcesar.Click
+        lstEjercicios.Items.Clear()
+
+        lstEjercicios.Items.Add("Numero pares del 1 al 20")
+        For i = 2 To 20 Step 2
+            lstEjercicios.Items.Add(i)
+        Next
+
+        lstEjercicios.Items.Add("Numero impares del 1 al 20")
+        For i = 1 To 20 Step 2
+            lstEjercicios.Items.Add(i)
+        Next
     End Sub
 
-    Private Sub grdEstadistica_KeyUp(sender As Object, e As KeyEventArgs) Handles grdEstadistica.KeyUp
-        Dim nfilas = grdEstadistica.Rows.Count - 1,
-            totalf1 = 0,
-            totalx1xf1 = 0.0,
-            totalx21xf1 = 0.0
-        Dim fila As New DataGridViewRow
-        For i = 0 To nfilas - 1
-            fila = grdEstadistica.Rows(i)
-            Dim x1 = 0, f1 = 0
-            If fila.Cells("x1").Value <> "" Then
-                x1 = Integer.Parse(fila.Cells("x1").Value.ToString())
-            End If
-            If fila.Cells("f1").Value <> "" Then
-                f1 = Integer.Parse(fila.Cells("f1").Value.ToString())
-            End If
-            totalf1 += f1
-            totalx1xf1 += x1 * f1
-            totalx21xf1 += x1 ^ 2 * f1
+    Private Sub btnParImpar_Click(sender As Object, e As EventArgs) Handles btnParImpar.Click
+        Dim num = txtnum.Text
+        If num Mod 2 = 0 Then
+            MessageBox.Show("El numero: " + num + ", es par")
+        Else
+            MessageBox.Show("El numero: " + num + ", es impar")
+        End If
+    End Sub
 
-            fila.Cells("n1").Value = totalf1.ToString()
-            fila.Cells("x1xf1").Value = (x1 * f1).ToString()
-            fila.Cells("x21xf1").Value = (x1 ^ 2 * f1).ToString()
+    Private Sub btnPrimo_Click(sender As Object, e As EventArgs) Handles btnPrimo.Click
+        Dim num = txtnum.Text, i = 0, acu = 1
+        While i < 3 And acu <= num
+            If num Mod acu = 0 Then
+                i += 1 ' i=i+1
+            End If
+            acu += 1
+        End While
+        If i <= 2 Then
+            MessageBox.Show("Es primo")
+        Else
+            MessageBox.Show("NO es primo")
+        End If
+    End Sub
+
+    Private Sub btnCajero_Click(sender As Object, e As EventArgs) Handles btnCajero.Click
+        Dim denominaciones() = {100, 50, 20, 10, 5, 1, 0.5, 0.25, 0.1, 0.05, 0.01}, valor = txtnum.Text, cantidad = 0
+        Dim denomina As String
+
+        lstEjercicios.Items.Clear()
+
+        For Each denominacion In denominaciones
+            While valor > 0 And denominacion <= valor
+                valor = Math.Round(valor - denominacion, 2)
+                cantidad += 1
+            End While
+            If cantidad > 0 Then
+                If denominacion <= 1 Then
+                    denomina = " moneda de "
+                Else
+                    denomina = " billete de "
+                End If
+                lstEjercicios.Items.Add(cantidad.ToString() + denomina + denominacion.ToString())
+                cantidad = 0
+            End If
         Next
-        lbltotalf1.Text = totalf1.ToString()
-        lbltotalx1xf1.Text = totalx1xf1.ToString()
-        lbltotalx21xf1.Text = totalx21xf1.ToString()
-
-        Dim media = Math.Round(totalx1xf1 / totalf1, 2),
-            varianza = Math.Round(totalx21xf1 / totalf1 - media ^ 2, 2)
-        lblRespuestaMedia.Text = media.ToString()
-        lblRespuestaVarianza.Text = varianza.ToString()
-        lblRespuestaDesvTipica.Text = Math.Round(Math.Sqrt(varianza), 2).ToString()
-
     End Sub
 End Class
 
