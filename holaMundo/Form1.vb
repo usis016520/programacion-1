@@ -1,48 +1,26 @@
 ﻿Public Class Form1
-    Private Sub btnCalcular_Click(sender As Object, e As EventArgs) Handles btnCalcular.Click
-        'Dim es una palabra reservada para declarar una variable
-        Dim num1, num2, respuesta As Double 'Declaro las variables en linea separadas por comas del mismo tipo
+    Private Sub btnProcesar_Click(sender As Object, e As EventArgs) Handles btnProcesar.Click
+        Dim ntabla, i As Int64
+        ntabla = txtntabla.Text
+        i = 1
 
-        num1 = txtnum1.Text 'capturando el dato que ingres el usuario a la caja de texto, asigno dicho valor a la variable num1.
-        num2 = txtnum2.Text
+        lstTablas.Items.Clear()
+        Do While i <= 10
+            lstTablas.Items.Add(ntabla.ToString() + "X" + i.ToString() + "=" + (ntabla * i).ToString())
+            i = i + 1
+        Loop
 
-        If optSuma.Checked Then 'If -> si de condicion
-            lblrespuesta.Text = num1 + num2 'realizamos la suma
-        End If
+    End Sub
 
-        If optResta.Checked Then
-            lblrespuesta.Text = num1 - num2 'realizamos la resta
-        End If
+    Private Sub lstTablas_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstTablas.SelectedIndexChanged
 
-        If optMultiplicar.Checked Then
-            lblrespuesta.Text = num1 * num2 'realizamos la multiplicacion
-        End If
+    End Sub
 
-        If optDividir.Checked Then
-            lblrespuesta.Text = num1 / num2 'realizamos la division
-        End If
+    Private Sub txtntabla_TextChanged(sender As Object, e As EventArgs) Handles txtntabla.TextChanged
 
-        If optPorcentaje.Checked Then
-            lblrespuesta.Text = num1 * num2 / 100 'Realizar el proceso de porcentaje....
-        End If
-        If optExponenciacion.Checked Then
-            lblrespuesta.Text = num1 ^ num2 'Realizar el proceso de exponenciacion....
-        End If
-        If optresiduo.Checked Then
-            lblrespuesta.Text = num1 Mod num2
-        End If
-        Select Case cboOperaciones.SelectedIndex
-            Case 1 'Suma
-                lblrespuesta.Text = num1 + num2
+    End Sub
 
-            Case 2 'Resta
-                lblrespuesta.Text = num1 - num2
+    Private Sub lblntabla_Click(sender As Object, e As EventArgs) Handles lblntabla.Click
 
-            Case 3 'Multiplicacion
-                lblrespuesta.Text = num1 * num2
-
-            Case 4 'Division
-                lblrespuesta.Text = num1 / num2
-        End Select
     End Sub
 End Class
