@@ -22,61 +22,117 @@ Partial Class Form1
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnProcesar = New System.Windows.Forms.Button()
-        Me.lstTablas = New System.Windows.Forms.ListBox()
-        Me.txtntabla = New System.Windows.Forms.TextBox()
-        Me.lblntabla = New System.Windows.Forms.Label()
+        Me.lblinteresCompuesto = New System.Windows.Forms.Label()
+        Me.lblInteresSimple = New System.Windows.Forms.Label()
+        Me.txtTiempo = New System.Windows.Forms.TextBox()
+        Me.lbltiempo = New System.Windows.Forms.Label()
+        Me.txtinteres = New System.Windows.Forms.TextBox()
+        Me.lblinteres = New System.Windows.Forms.Label()
+        Me.txtcapital = New System.Windows.Forms.TextBox()
+        Me.lblcapital = New System.Windows.Forms.Label()
+        Me.btnCalcular = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'btnProcesar
+        'lblinteresCompuesto
         '
-        Me.btnProcesar.Location = New System.Drawing.Point(49, 175)
-        Me.btnProcesar.Margin = New System.Windows.Forms.Padding(4)
-        Me.btnProcesar.Name = "btnProcesar"
-        Me.btnProcesar.Size = New System.Drawing.Size(187, 76)
-        Me.btnProcesar.TabIndex = 7
-        Me.btnProcesar.Text = "Generar Tabla"
-        Me.btnProcesar.UseVisualStyleBackColor = True
+        Me.lblinteresCompuesto.AutoSize = True
+        Me.lblinteresCompuesto.Location = New System.Drawing.Point(357, 133)
+        Me.lblinteresCompuesto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblinteresCompuesto.Name = "lblinteresCompuesto"
+        Me.lblinteresCompuesto.Size = New System.Drawing.Size(142, 17)
+        Me.lblinteresCompuesto.TabIndex = 17
+        Me.lblinteresCompuesto.Text = "Interes Compuesto: ?"
         '
-        'lstTablas
+        'lblInteresSimple
         '
-        Me.lstTablas.FormattingEnabled = True
-        Me.lstTablas.ItemHeight = 16
-        Me.lstTablas.Location = New System.Drawing.Point(273, 71)
-        Me.lstTablas.Margin = New System.Windows.Forms.Padding(4)
-        Me.lstTablas.Name = "lstTablas"
-        Me.lstTablas.Size = New System.Drawing.Size(301, 180)
-        Me.lstTablas.TabIndex = 6
+        Me.lblInteresSimple.AutoSize = True
+        Me.lblInteresSimple.Location = New System.Drawing.Point(89, 133)
+        Me.lblInteresSimple.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblInteresSimple.Name = "lblInteresSimple"
+        Me.lblInteresSimple.Size = New System.Drawing.Size(113, 17)
+        Me.lblInteresSimple.TabIndex = 16
+        Me.lblInteresSimple.Text = "Interes Simple: ?"
         '
-        'txtntabla
+        'txtTiempo
         '
-        Me.txtntabla.Location = New System.Drawing.Point(102, 102)
-        Me.txtntabla.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtntabla.Name = "txtntabla"
-        Me.txtntabla.Size = New System.Drawing.Size(132, 22)
-        Me.txtntabla.TabIndex = 5
+        Me.txtTiempo.Location = New System.Drawing.Point(506, 63)
+        Me.txtTiempo.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTiempo.Name = "txtTiempo"
+        Me.txtTiempo.Size = New System.Drawing.Size(64, 22)
+        Me.txtTiempo.TabIndex = 15
         '
-        'lblntabla
+        'lbltiempo
         '
-        Me.lblntabla.AutoSize = True
-        Me.lblntabla.Location = New System.Drawing.Point(45, 105)
-        Me.lblntabla.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.lblntabla.Name = "lblntabla"
-        Me.lblntabla.Size = New System.Drawing.Size(48, 17)
-        Me.lblntabla.TabIndex = 4
-        Me.lblntabla.Text = "Tabla:"
+        Me.lbltiempo.AutoSize = True
+        Me.lbltiempo.Location = New System.Drawing.Point(394, 67)
+        Me.lbltiempo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lbltiempo.Name = "lbltiempo"
+        Me.lbltiempo.Size = New System.Drawing.Size(105, 17)
+        Me.lbltiempo.TabIndex = 14
+        Me.lbltiempo.Text = "Tiempo (Años):"
+        '
+        'txtinteres
+        '
+        Me.txtinteres.Location = New System.Drawing.Point(310, 63)
+        Me.txtinteres.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtinteres.Name = "txtinteres"
+        Me.txtinteres.Size = New System.Drawing.Size(72, 22)
+        Me.txtinteres.TabIndex = 13
+        '
+        'lblinteres
+        '
+        Me.lblinteres.AutoSize = True
+        Me.lblinteres.Location = New System.Drawing.Point(250, 67)
+        Me.lblinteres.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblinteres.Name = "lblinteres"
+        Me.lblinteres.Size = New System.Drawing.Size(55, 17)
+        Me.lblinteres.TabIndex = 12
+        Me.lblinteres.Text = "Interes:"
+        '
+        'txtcapital
+        '
+        Me.txtcapital.Location = New System.Drawing.Point(108, 63)
+        Me.txtcapital.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtcapital.Name = "txtcapital"
+        Me.txtcapital.Size = New System.Drawing.Size(135, 22)
+        Me.txtcapital.TabIndex = 11
+        '
+        'lblcapital
+        '
+        Me.lblcapital.AutoSize = True
+        Me.lblcapital.Location = New System.Drawing.Point(48, 67)
+        Me.lblcapital.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblcapital.Name = "lblcapital"
+        Me.lblcapital.Size = New System.Drawing.Size(55, 17)
+        Me.lblcapital.TabIndex = 10
+        Me.lblcapital.Text = "Capital:"
+        '
+        'btnCalcular
+        '
+        Me.btnCalcular.Location = New System.Drawing.Point(205, 201)
+        Me.btnCalcular.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnCalcular.Name = "btnCalcular"
+        Me.btnCalcular.Size = New System.Drawing.Size(197, 58)
+        Me.btnCalcular.TabIndex = 9
+        Me.btnCalcular.Text = "Calcular"
+        Me.btnCalcular.UseVisualStyleBackColor = True
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(619, 322)
-        Me.Controls.Add(Me.btnProcesar)
-        Me.Controls.Add(Me.lstTablas)
-        Me.Controls.Add(Me.txtntabla)
-        Me.Controls.Add(Me.lblntabla)
+        Me.Controls.Add(Me.lblinteresCompuesto)
+        Me.Controls.Add(Me.lblInteresSimple)
+        Me.Controls.Add(Me.txtTiempo)
+        Me.Controls.Add(Me.lbltiempo)
+        Me.Controls.Add(Me.txtinteres)
+        Me.Controls.Add(Me.lblinteres)
+        Me.Controls.Add(Me.txtcapital)
+        Me.Controls.Add(Me.lblcapital)
+        Me.Controls.Add(Me.btnCalcular)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
@@ -86,8 +142,13 @@ Partial Class Form1
 
     End Sub
 
-    Friend WithEvents btnProcesar As Button
-    Friend WithEvents lstTablas As ListBox
-    Friend WithEvents txtntabla As TextBox
-    Friend WithEvents lblntabla As Label
+    Friend WithEvents lblinteresCompuesto As Label
+    Friend WithEvents lblInteresSimple As Label
+    Friend WithEvents txtTiempo As TextBox
+    Friend WithEvents lbltiempo As Label
+    Friend WithEvents txtinteres As TextBox
+    Friend WithEvents lblinteres As Label
+    Friend WithEvents txtcapital As TextBox
+    Friend WithEvents lblcapital As Label
+    Friend WithEvents btnCalcular As Button
 End Class
